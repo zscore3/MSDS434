@@ -1,19 +1,7 @@
-Concept: Something solarpunk & optimization driven, maybe? 
+There's nothing I have so much trouble with as coming up with the concept of a project from blank. Give me a concept, or better yet, requirements, and I will figure out how to implement a solution that achieves the needed capability, but give me a blank sheet and ask me to provide a concept and I barely know where to start. At work, I start with, "What are the KPIs," "What subjects are difficult for the stakeholders to make informed decisions about?" and "What information would ease those decisions?" Without KPIs, with just a vague idea of what sort of stuff I'm interested, I'm a kite in the wind.
 
-    The two core tenants of Solarpunk are personal freedom and sustainability provided via technological solutions
+I have a project that I've wanted to do for work that might actually line up with this course fairly well. The design is to have at least two data sources which describe the same event occurring in different ways, sort of like senses - Eyes which see certain things, and Ears which hear certain things. Then I'd like to compare the observations from one set with the other to determine an overall list of observed events, along with a likelihood of an event truthfully occurring based on the observed data, or alternately, absent a source of ground truth to train the model on, a means by which the "agreement" of the sources can be measured, and thereby an estimation of the probability of a false positive/false negative, and therefore the accuracy of each of the sources.
 
-    I think the hypothesis is going to be an optimization approach to maximizing devlopment and sustainability?
-    
-    References: 
-    Development as Freedom by Amartya Sen
-    Population Growth https://ourworldindata.org/population-growth#two-centuries-of-rapid-global-population-growth-will-come-to-an-end
-    Can we power the world with only clean energy? https://youtu.be/6c94vRmbM6Y?si=yh0tv3UcwgIpnwo3
-    Relocating croplands could drastically reduce the environmental impacts of global food production https://www.nature.com/articles/s43247-022-00360-6#Fig1
-    
+I'm not sure how much any of that made sense, but what I really need is a pair of sources of data that would fit that bill. I'd even be down to simulate data for use in the project - I could build a service which creates a flow of events (i.e. a simulated ground truth), then simulates "evidence" with a certain rate of false negative/false positives. Then another service which pulls that data and tries to calculate those manually set values without being informed of what the simulated accuracy is supposed to be. Then, if I can demonstrate the ability to determine the "accuracy" compared to a set "ground truth," I can reasonably expect to be able to determine "accuracy" when ground truth is unknown.
 
-Requirements:
-
-Design:
-
-Implementation Plan:
-
+This is just a concept so far, not even really a first draft. Hopefully I can refine this design a bit before it's time to start implementing things.
