@@ -11,7 +11,7 @@ from sklearn.metrics import (
 
 
 #Data Loading
-df = pd.read_csv('loan_data.csv')
+df = pd.read_csv('s3://msds434finalprojectcogswell/datalab_export_2025-05-26 14_10_54.csv')
 df.head()
 
 pre_df = pd.get_dummies(df,columns=['purpose'],drop_first=True)
