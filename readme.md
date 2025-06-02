@@ -1,4 +1,4 @@
-First phase
+First phase: initial run 
 1. Load datalab csv to S3
 2. Instantiate EC2 & Configure IAM role for interaction with S3
 3. Start running code:
@@ -10,7 +10,7 @@ First phase
 4. Load the NaiveBayes.py script
 5. Run the code
 
-Second phase
+Second phase: containerized run
 1. Load dockerfile, .dockerignore, and requirements.txt
 2. In the EC2 which runs NaiveBayes.py, start running code:
    sudo snap install docker
@@ -21,3 +21,5 @@ Second phase
    ##End Optional code
    sudo docker build -t my-python-app
    sudo docker run my-python-app
+
+Third phase: 
