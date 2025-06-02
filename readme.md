@@ -26,7 +26,7 @@ Third phase: Monitoring Applications
 1. Fix up the security attributes of the EC2 to allow external traffic
 2. Create two additional connections, i.e. via putty
 3. Load in the prometheus.yml file
-4. Start installing Prometheus and Grafana
+4. Start installing Prometheus and Grafana  
    sudo docker pull prom/prometheus  
    sudo docker pull grafana/grafana  
    sudo docker network create network  
