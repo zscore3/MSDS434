@@ -22,4 +22,8 @@ Second phase: containerized run
    sudo docker build -t my-python-app
    sudo docker run my-python-app
 
-Third phase: 
+Third phase: Monitoring Applications
+1. Fix up the security attributes of the EC2 to allow external traffic
+2. Create two additional connections, i.e. via putty
+3. Start installing Prometheus and Grafana, ignoring the fact that it's best practice to run monitoring applications on a separate cluster from your analytics services
+4. 
