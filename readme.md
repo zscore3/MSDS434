@@ -8,7 +8,7 @@ First phase: initial run
    source myenv/bin/activate  
    pip3 install s3fs pandas scikit-learn  
 4. Load the NaiveBayes.py script
-5. Run the code
+5. Run the script
 
 Second phase: containerized run
 1. Load dockerfile, .dockerignore, and requirements.txt
