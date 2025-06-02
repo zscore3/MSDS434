@@ -25,5 +25,20 @@ Second phase: containerized run
 Third phase: Monitoring Applications
 1. Fix up the security attributes of the EC2 to allow external traffic
 2. Create two additional connections, i.e. via putty
-3. Start installing Prometheus and Grafana, ignoring the fact that it's best practice to run monitoring applications on a separate cluster from your analytics services
-4. 
+3. Load in the prometheus.yml file
+4. Start installing Prometheus and Grafana, ignoring the fact that it's best practice to run monitoring applications on a separate cluster from your analytics services
+   sudo docker pull prom/prometheus
+   sudo docker pull grafana/grafana
+   sudo docker network create network
+   sudo docker volume create prometheus-data
+   sudo docker volume create grafana-data
+   sudo docker container run --name prometheus -v prometheus.yml -v prometheus-data:/prometheus -p 9090:9090 prom/prometheus
+   #in the other terminal
+   sudo docker container run --name grafana -v grafana-data -p 3000:3000 -network network grafana/grafana
+5. Grab the DNS and navigate to the EC2's 3000 port
+6. log in with admin admin
+7. add Prometheus as a data source with the EC2's 9090 port, then save & test
+8. Administration > Dashboard > Visualization
+9. Select a metric and run the query
+10. Go back to the original terminal and run the python app
+    Optionally, you could alter the docker file to just keep running the python script on a set schedule.
