@@ -34,7 +34,7 @@ Third phase: Monitoring Applications
    sudo docker volume create grafana-data  
    sudo docker container run --name prometheus -v prometheus.yml -v prometheus-data:/prometheus -p 9090:9090 prom/prometheus  
    #in the other terminal  
-   sudo docker container run --name grafana -v grafana-data -p 3000:3000 -network network grafana/grafana  
+   sudo docker container run --name grafana -v grafana-data -p 3000:3000 --network network grafana/grafana  
 5. Grab the DNS and navigate to the EC2's 3000 port
 6. log in with admin admin
 7. add Prometheus as a data source with the EC2's 9090 port, then save & test
