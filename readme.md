@@ -40,5 +40,5 @@ Third phase: Monitoring Applications
 7. add Prometheus as a data source with the EC2's 9090 port, then save & test
 8. Administration > Dashboard > Visualization
 9. Select a metric and run the query
-10. Go back to the original terminal and run the python app
+10. Go back to the original terminal and run the python app  
 Optional: you could alter the docker file to just keep running the python script on a set schedule instead.
