@@ -6,11 +6,9 @@ jobs:
   Environment:
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y python3-venv
-          python3 -m venv myenv
-          source myenv/bin/activate
-          python -m pip install --upgrade pip
-          python -m pip install s3fs pandas scikit-learn
+      - name: Environment
+        run: sudo apt update
+        run: sudo apt install python3-venv
+        run: python3 -m venv myenv
+        run: source myenv/bin/activate
+        run: pip3 install s3fs pandas scikit-learn
